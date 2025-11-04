@@ -1,1 +1,18 @@
 <p>ciag works!</p>
+<form #form="ngForm" (ngSubmit)="ciag()">
+    <label name="liczba">wyraz poczatkowy</label>
+    <input type="number" name="liczba" [(ngModel)]="liczba" class="form-control" required>
+
+        <label name="roznica">roznica</label>
+    <input type="number" name="roznica" [(ngModel)]="roznica" class="form-control" required>
+
+        <label name="liczbaWyrazowCiagu">liczba wyrazow w ciagu</label>
+    <input type="number" name="liczbaWyrazowCiagu" [(ngModel)]="liczbaWyrazowCiagu" class="form-control" required>
+<button type="submit" class="btn btn-primary" [disabled]="form.invalid">wyswietl</button>
+
+</form>
+<div>
+@for (item of tablicaLiczb; track $index) {
+    {{item}}, 
+}
+</div>
