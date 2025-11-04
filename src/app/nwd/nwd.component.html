@@ -1,0 +1,25 @@
+<h3>Obliczanie NWD</h3>
+
+<form #formularzyk="ngForm" (ngSubmit)="obliczNWD()">
+    <label for="liczbaa">a:</label>
+    <input type="number" 
+        name="liczbaa"
+        [(ngModel)]="a"
+        required
+        min="1"
+    >
+        <label for="liczbab">b:</label>
+    <input type="liczbab" 
+        name="liczbab"
+        [(ngModel)]="b"
+        required
+        min="1"
+    >
+    <button type="submit" [disabled]="formularzyk.invalid">oblicz</button>
+
+ <!--
+    required - dene wymagane
+    [disabled]="formularzyk.invalid" - kiedy brak w required przycisk niedostepny
+ -->
+</form>
+{{nwd}}
