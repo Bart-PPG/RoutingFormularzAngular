@@ -1,1 +1,23 @@
-<p>filmy works!</p>
+<form (ngSubmit)="dodajFilm()">
+    <div class="form-group">
+        <label name="tytul">tytul filmu:</label>
+        <input type="text" class="form-control" [(ngModel)]="tytul" name="tytul">
+    </div>
+
+    <div class="form-group">
+        <label name="rodzaj">rodzaj filmu:</label>
+        <select
+        class="form-control" 
+        [(ngModel)]="rodzaj"
+         name="rodzaj">
+
+<option value="0"></option>
+<option value="1">Komedia</option>
+<option value="2">Obyczajowa</option>
+<option value="3">Sensacja</option>
+<option value="4">Horror</option>
+
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Dodaj</button>
+</form>
