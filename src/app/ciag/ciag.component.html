@@ -7,7 +7,7 @@
     <input type="number" name="roznica" [(ngModel)]="roznica" class="form-control" required>
 
         <label name="liczbaWyrazowCiagu">liczba wyrazow w ciagu</label>
-    <input type="number" name="liczbaWyrazowCiagu" [(ngModel)]="liczbaWyrazowCiagu" class="form-control" required>
+    <input type="number" name="liczbaWyrazowCiagu" [(ngModel)]="liczbaWyrazowCiagu" class="form-control" max="100" min="1" required>
 <button type="submit" class="btn btn-primary" [disabled]="form.invalid">wyswietl</button>
 
 </form>

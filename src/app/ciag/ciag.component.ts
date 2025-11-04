@@ -15,6 +15,7 @@ export class CiagComponent {
   liczbaWyrazowCiagu = 0
 
   ciag(){
+    this.tablicaLiczb=[]
     this.tablicaLiczb.push(this.liczba);
     for(let i = 1;i < this.liczbaWyrazowCiagu;i++){
       this.tablicaLiczb[i]= this.tablicaLiczb[i-1]+this.roznica
